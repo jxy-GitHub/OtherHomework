@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>重庆大学选课系统</title>
+    <link rel="stylesheet" type="text/css" href="course.css">
+    <script language="JavaScript">
+        function change(rurl) {
+            window.location = rurl;
+        }
+
+        function myFunction() {
+            var x;
+            var r = confirm("确定提交课程");
+            if (r == true) {
+                x = "提交成功!";
+            } else {
+                x = "提交失败!";
+            }
+            document.getElementById("demo").innerHTML = x;
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="container clearfix">
+            <img class="link img" src="image/top_logo.png" alt="">
+            <a class="link left">首页</a>
+            <a class="link left">全部课程</a>
+            <a class="link left">培养方案</a>
+            <a class="link left">个人信息</a>
+            <div class="link left item clearfix">
+                课表查询
+                <ul class="dropdown">
+                    <li>个人课表</li>
+                    <li>按周次</li>
+                </ul>
+            </div>
+            <a class="link left">常见问题</a>
+            <a class="link right">登录</a>
+            <a class="link right">注册</a>
+        </div>
+    </nav>
+    <div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="div1">
+            <a class="text">筛选</a>
+            <select class="fbtn" onchange="change(this.value)">
+                <option value="#">请选择上课地点</option>
+                <option value="#">A区</option>
+                <option value="#">B区</optionvalue="#">
+                <option value="#">虎溪校区</optionvalue="#">
+            </select>
+            <select class="fbtn" onchange="change(this.value)">
+                <option value="#">请选择授课方式</option>
+                <option value="#">面授</option>
+                <option value="#">网课</option>
+            </select>
+            <select class="fbtn" onchange="change(this.value)">
+                <option value="#">请选择课程性质</option>
+                <option value="#">必修</option>
+                <option value="#">选修</option>
+                <option value="#">重修</option>
+            </select>
+            <button class="pagebtn">确定</button>
+            <br>
+            <br>
+            <form action="http://www.baidu.com/baidu" target="_blank">
+                <tr>
+                    <td>
+                        <input class="text_column" type=text name=word size=30>
+                        <input id="search" class="pagebtn" type="submit" value="搜索">
+                    </td>
+                </tr>
+            </form>
+        </div>
+        <br>
+        <div class="gallery">
+            <div class="thumbnail">
+                <h4>人机交互设计</h4>
+                <p class="tag">教师：熊敏 学分：2学分</p>
+                <p class="text_column">
+                    课程简介：包括人机交互的心理学原理；人机界面设计的方法、指南、原则、理论；界面设计过程的管理、评估；界面的交互风格设计问题：窗口、菜单和命令设计，声音和颜色、图标和声音等等。
+                </p>
+            </div>
+            <div class="thumbnail">
+                <h4>软件需求分析</h4>
+                <p class="tag">教师：张毅 学分：2学分</p>
+                <p class="text_column">
+                    课程简介：需求分析也称为软件需求分析、系统需求分析或需求分析工程等，是开发人员准确理解用户和项目的功能、性能、可靠性等具体要求，从而确定系统必须做什么的过程。
+                </p>
+            </div>
+            <div class="thumbnail">
+                <h4>Java EE程序设计</h4>
+                <p class="tag">教师：黄晟 学分：2学分</p>
+                <p class="text_column">课程简介：通过本课程学习,
+                    使学生理解和掌握JAVAEE程序设计方法,建立起牢固扎实的理论基础,掌握使用JAVAEE编程技术针对复杂工程问题进行程序分析和设计的能力。</p>
+            </div>
+            <div class="thumbnailnow">
+                <h4 class=“tag”>当前已选课程</h4>
+                <p class="tag">-人机交互设计</p>
+                <p class="tag">-软件需求分析</p>
+                <a onclick="myFunction()" class="pagebtn">提交</a>
+                <p id="demo"></p>
+            </div>
+        </div>
+        <div>
+            <div class="thumbnailok">
+                <button class="pagebtn">选择</button>
+                <button class="pagebtn">查看详情</button>
+            </div>
+            <div class="thumbnailok">
+                <button class="pagebtn">选择</button>
+                <button class="pagebtn">查看详情</button>
+            </div>
+            <div class="thumbnailok">
+                <button class="pagebtn">选择</button>
+                <button class="pagebtn">查看详情</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <div class="thumbnail">
+                <h4>软件工程导论</h4>
+                <p class="tag">教师：张毅 学分：3学分</p>
+                <p class="text_column">
+                    课程简介：《软件工程导论》课程教学内容分为“基本教学”和“实验教学”两部分。基本教学内容是学习软件开发和管理的基本知识，以及指导软件开发的各种方法和技术。实验教学以具体的软件项目为对象，包括：讲座和软件项目开发实践两部分。实验教学与基本教学内容紧密配合，同步进行。
+                    《软件工程导论》的主要内容有：软件危机与软件工程，可行性研究，需求分析，总体设计，详细设计，编码，软件测试，软件维护等章节。通过学习软件工程的有关基本概念和原理，初步掌握常见的软件过程模型，能够进行软件开发中的可行性和需求分析，完成总体设计、详细设计，实现软件的编码、软件的测试和软件的维护等工作。
+                </p>
+            </div>
+            <div class="thumbnail">
+                <h4>大学物理II-2</h4>
+                <p class="tag">教师：曾代敏 学分：3.5学分</p>
+                <p class="text_column">
+                    课程简介：利用在线课程的多媒体技术优势，本课程强化了物理图像的展示和讲解。例如高等数学的应用、相对论时空观、波粒二象性和量子概念等，本在线课程制作了丰富而恰当的、具有创新性的动画展示，非常便于学生克服难点，增强对相关知识点理解和掌握。作为工科学生本科阶段极少甚至是唯一的科学类课程，《大学物理》在线课程结合了较多的工程技术和高新技术知识，可促进学生掌握更多实用技术的物理基础，在提高学习兴趣的同时增强对科学与技术相互关系的理解。本课程配置了丰富的在线测试题目，学生可以即时检测学习状态和知识的理解程度。本课程还提供了较多的参考资料，可供学生深入学习。
+                </p>
+            </div>
+            <div class="thumbnail">
+                <h4>建筑构造（二）</h4>
+                <p class="tag">教师：王雪松、翁季、孙雁、覃琳、王朝霞 学分：4学分</p>
+                <p class="text_column">
+                    课程简介：“高层建筑构造”和“大跨度建筑构造”专题作为建筑学高年级设计主干课程的前序课程，突破了传统的建筑幕墙构造和金属屋面构造内容限定，建立了建筑空间、形态与结构力学和形态的关联，课程针对性较强。“工业化建筑构造”专题紧紧把握我国建筑业发展的脉络，及时引入当代预制装配建筑的新知识、新材料和新构造，具有强烈的时代特征，并在工业化建筑发展的历史中，阐述工业化建筑构造的原理与方法，将“鱼”与“渔”完美结合。“建筑装修构造”始终坚持实用性和前瞻性为导向的内容设置，在坚守基本构造原理和方法的基础上，将室内设计与新材料、新工艺、新技术紧密结合。
+                </p>
+            </div>
+        </div>
+        <div>
+            <div class="thumbnailok">
+                <button class="pagebtn">选择</button>
+                <button class="pagebtn">查看详情</button>
+            </div>
+            <div class="thumbnailok">
+                <button class="pagebtn">选择</button>
+                <button class="pagebtn">查看详情</button>
+            </div>
+            <div class="thumbnailok">
+                <button class="pagebtn">选择</button>
+                <button class="pagebtn">查看详情</button>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="div2">
+            <a class="pagebtn">上一页</a>
+            <a href="index.html">1</a>
+            <a href="index.html">2</a>
+            <a href="index.html">3</a>
+            <a href="index.html">4</a>
+            <a href="index.html">5</a>
+            <a href="index.html">6</a>
+            <a href="index.html">7</a>
+            <a href="index.html">8</a>
+            <a href="index.html">9</a>
+            <a href="index.html">10</a>
+            <a class="pagebtn">下一页</a>
+        </div>
+        <br>
+        <br>
+    </div>
+    <footer class="footer">
+        <br>
+        <p class="hero_header">地址：重庆市沙坪坝区沙正街174号 邮编400044</p>
+        <p class="hero_header">办公室电话：023-xxxxxxxx</p>
+        <div class="button">GET IN TOUCH WITH ME</div>
+    </footer>
+</body>
+
+</html>
